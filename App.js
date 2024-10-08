@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Nav from './components/Nav';
 
 function App() {
   return (
     <div className="App">
+      <Nav />
+      
       <header className="hero-section">
         <h1>Welcome to Our Daycare</h1>
         <p>Providing a safe and nurturing environment for your child.</p>
