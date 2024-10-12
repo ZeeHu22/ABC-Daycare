@@ -1,0 +1,47 @@
+#Landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Make sure the parent is positioned */
+}
+
+#Landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/IMG_9249.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(.5); /* Apply the faded effect to the background image */
+    z-index: -1; /* Send the background image to the back */
+}
+
+#Landing .container {
+    width: 80%;
+    height: 30vh;
+    margin-top: 32px;
+    margin-left: 80px;
+    position: relative; /* Make sure the container is positioned */
+    z-index: 0; /* Bring the container to the front */
+}
+
+#Landing .container .title {
+    margin-bottom: 64px;
+    color: white;
+}
+
+#Landing .container .para {
+    margin-bottom: 64px;
+    color: white;
+}
+
+/* Add z-index to the button if it's a direct child of #Landing */
+#Landing button {
+    position: relative;
+    z-index: 1; /* Bring the button to the front */
+}

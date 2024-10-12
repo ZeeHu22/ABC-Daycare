@@ -12,23 +12,23 @@ body {
   text-align: center;
 }
 
-header.hero-section {
+header.container {
   /* background: url('hero-image.jpg') no-repeat center center/cover; */
   color: black;
   padding: 100px 20px;
 }
 
-header.hero-section h1 {
+header.container h1 {
   font-size: 3em;
   margin: 0;
 }
 
-header.hero-section p {
+header.container p {
   font-size: 1.5em;
   margin: 20px 0;
 }
 
-header.hero-section button {
+header.container button {
   background-color: #ff6f61;
   color: white;
   border: none;
@@ -38,7 +38,7 @@ header.hero-section button {
   border-radius: 5px;
 }
 
-header.hero-section button:hover {
+header.container button:hover {
   background-color: #ff4a3d;
 }
 
