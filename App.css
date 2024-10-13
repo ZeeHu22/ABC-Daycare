@@ -28,20 +28,6 @@ header.container p {
   margin: 20px 0;
 }
 
-header.container button {
-  background-color: #ff6f61;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-header.container button:hover {
-  background-color: #ff4a3d;
-}
-
 section {
   padding: 60px 20px;
 }
