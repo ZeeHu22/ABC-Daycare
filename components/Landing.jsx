@@ -9,8 +9,6 @@ export default function Landing({ openModal, closeModal }) {
         <p className="para">Providing a safe and nurturing environment for your child.</p>
         <button onClick={openModal}>Schedule a Tour</button>
       </header>
-
-      
     </div>
   );
 }
