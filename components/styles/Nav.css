@@ -1,4 +1,3 @@
-/* Header Styles */
 .header {
     display: flex;
     justify-content: center;
@@ -14,21 +13,14 @@
     z-index: 10;
 }
 
-.header h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* Sidebar Styles */
 .nav-sidebar {
     position: fixed;
     top: 70px;
     left: 0;
-    width: 80px; /* Collapsed width */
+    width: 80px;
     height: 100vh;
     background-color: #44656a;
-    transition: width 0.3s ease; /* Smooth transition */
+    transition: width 0.3s ease;
     overflow: hidden;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -36,12 +28,10 @@
     flex-direction: column;
 }
 
-/* Sidebar expands on hover */
 .nav-sidebar:hover {
-    width: 160px; /* Expanded width */
+    width: 160px;
 }
 
-/* Sidebar List Styling */
 .nav-sidebar ul {
     list-style: none;
     padding: 20px;
@@ -50,15 +40,13 @@
     flex-direction: column;
 }
 
-/* Sidebar List Item Styling */
 .nav-sidebar li {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
 }
 
-/* Sidebar Links */
 .nav-sidebar a {
     text-decoration: none;
     color: #fff;
@@ -69,28 +57,24 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect on links */
 .nav-sidebar a:hover {
     background-color: #77aeb5;
     border-radius: 5px;
 }
 
-/* Sidebar Icons */
 .nav-sidebar i {
     font-size: 24px;
-    transition: margin-right 0.3s ease; /* Transition space between icon and text */
+    transition: margin-right 0.3s ease;
 }
 
-/* Initially hide text labels when collapsed */
 .nav-sidebar span {
     display: none;
     opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth transition for text appearance */
+    transition: opacity 0.3s ease;
 }
 
-/* Show text labels when sidebar expands */
 .nav-sidebar:hover span {
     display: inline;
     opacity: 1;
-    margin-left: 10px; /* Add spacing between icon and text */
+    margin-left: 10px;
 }

@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import './styles/Nav.css'; // Import the CSS for styling
 
-export default function Nav() {
+export default function Nav({ openModal, closeModal }) {
   return (
     <div>
       <header className="header">
@@ -11,23 +12,23 @@ export default function Nav() {
         <ul>
           {/* Home Link */}
           <li>
-            <a href="#">
-              <i className="fas fa-home"></i> {/* Font Awesome Icon */}
-              <span>Home</span> {/* Text Label */}
-            </a>
+            <Link to="/">
+              <i className="fas fa-home"></i>
+              <span>Home</span>
+            </Link>
           </li>
 
           {/* About Link */}
           <li>
-            <a href="#">
+            <Link to="/about">
               <i className="fas fa-info-circle"></i>
               <span>About</span>
-            </a>
+            </Link>
           </li>
 
           {/* Contact Link */}
           <li>
-            <a href="#">
+            <a onClick={openModal} href="#">
               <i className="fas fa-envelope"></i>
               <span>Contact</span>
             </a>

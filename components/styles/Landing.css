@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  position: relative; /* Make sure the parent is positioned */
+  position: relative;
   background: linear-gradient(to bottom, #77aeb5, transparent);
 }
 
@@ -18,8 +18,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0.5); /* Apply the faded effect to the background image */
-  z-index: -1; /* Send the background image to the back */
+  filter: brightness(0.5);
+  z-index: -1;
 }
 
 #Landing .container {
@@ -27,8 +27,8 @@
   height: 30vh;
   margin-top: 32px;
   margin-left: 80px;
-  position: relative; /* Make sure the container is positioned */
-  z-index: 0; /* Bring the container to the front */
+  position: relative;
+  z-index: 0;
 }
 
 #Landing .container .title {
