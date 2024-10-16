@@ -1,33 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./styles/Gallery.css"; // Optional: For additional custom styles
 
-const NextArrow = ({ onClick }) => (
-  <div className="arrow next" onClick={onClick}>
-    &#9654; {/* Right arrow symbol */}
-  </div>
-);
-
-const PrevArrow = ({ onClick }) => (
-  <div className="arrow prev" onClick={onClick}>
-    &#9664; {/* Left arrow symbol */}
-  </div>
-);
-
 const Gallery = ({ photos = [] }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentPhoto, setCurrentPhoto] = useState(null);
+
+  const openModal = (index) => {
+    setCurrentPhoto(photos[index]);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Default to 4 slides
+    slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    autoplay: false, // Disable auto scroll
     arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -54,11 +51,24 @@ const Gallery = ({ photos = [] }) => {
     <div className="gallery-container">
       <Slider {...settings}>
         {photos.map((photo, index) => (
-          <div key={index} className="slide">
+          <div key={index} className="slide" onClick={() => openModal(index)}>
             <img src={photo.src} alt={photo.alt} className="slide-image" />
           </div>
         ))}
       </Slider>
+
+      {isModalOpen && (
+        <div className="gallery-modal">
+          <button className="close-button" onClick={closeModal}>
+            &times;
+          </button>
+          {currentPhoto && (
+            <div className="gallery-modal-content">
+              <img src={currentPhoto.src} alt={currentPhoto.alt} className="modal-image" />
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
