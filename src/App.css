@@ -74,8 +74,8 @@ section p {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 40vh;
   padding-left: 40px;
+  margin-bottom: 50px;
   position: relative;
   z-index: 0;
 }
@@ -83,23 +83,26 @@ section p {
 .contact-us-container {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
+  max-width: 800px;
 }
 
 .contact-us-portrait {
-  width: 100px;
-  height: 100px;
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+  padding: 20px;
   overflow: hidden;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .contact-us-portrait img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 .contact-us-info {
@@ -107,13 +110,15 @@ section p {
   flex-direction: column;
   align-items: start;
   justify-content: center;
+  text-align: left;
+  max-width: 60% ;
 }
 
 .contact-us button {
   background-color: #ff6f61;
   color: white;
   border: none;
-  margin-top: 12px;
+  margin-top: 24px;
   padding: 15px 30px;
   font-size: 16px;
   font-weight: bold;

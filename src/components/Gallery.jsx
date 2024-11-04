@@ -59,7 +59,7 @@ const Gallery = ({ photos = [] }) => {
 
       {isModalOpen && (
         <div className="gallery-modal">
-          <button className="close-button" onClick={closeModal}>
+          <button className="close-button-gallery" onClick={closeModal}>
             &times;
           </button>
           {currentPhoto && (

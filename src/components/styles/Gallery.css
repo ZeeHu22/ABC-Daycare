@@ -58,7 +58,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.close-button {
+.close-button-gallery {
   position: absolute;
   top: 20px; /* Distance from the top of the modal */
   right: 20px; /* Distance from the right edge of the modal */
@@ -71,6 +71,6 @@
   transition: transform 0.3s;
 }
 
-.close-button:hover {
+.close-button-gallery:hover {
   transform: scale(1.2);
 }

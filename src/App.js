@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Nav from "./components/Nav";
@@ -20,6 +20,7 @@ import img8 from "./assets/IMG_9254.JPG";
 import img9 from "./assets/IMG_9255.JPG";
 import img10 from "./assets/IMG_9256.JPG";
 import Contact_us from "./components/Contact_us";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   const openModal = () => {
@@ -44,16 +45,28 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* Nav will display on all routes */}
         <Nav openModal={openModal} />
 
-        <Landing openModal={openModal} />
+        <Routes>
+          {/* Home Route */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Landing openModal={openModal} />
+                <Gallery photos={photos} />
+                <Contact openModal={openModal} closeModal={closeModal} />
+                <Contact_us openModal={openModal} />
+              </>
+            }
+          />
 
-        <Gallery photos={photos} />
+          {/* About Route */}
+          <Route path="/about" element={<Testimonials />} />
+        </Routes>
 
-        <Contact openModal={openModal} closeModal={closeModal} />
-
-        <Contact_us openModal={openModal} />
-
+        {/* Footer will display on all routes */}
         <Footer />
       </div>
     </Router>

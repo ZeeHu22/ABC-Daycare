@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import './styles/Nav.css'; // Import the CSS for styling
+import blocks from "../assets/abc-blocks.png"
 
 export default function Nav({ openModal }) {
   return (
     <div>
       <header className="header">
+        <img src={blocks}/>
         <h1>ABC Daycare</h1>
       </header>
       <nav className="nav-sidebar">

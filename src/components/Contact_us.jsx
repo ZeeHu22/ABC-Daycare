@@ -19,9 +19,9 @@ export default function Contact_us({ openModal }) {
           <p>
             <b>Email:</b> fouziahussain94@yahoo.com
           </p>
-          <button onClick={openModal}>Schedule a Tour</button>
         </div>
       </div>
+      <button onClick={openModal}>Schedule a Tour</button>
     </section>
   );
 }

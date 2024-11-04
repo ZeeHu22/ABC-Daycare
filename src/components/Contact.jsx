@@ -59,9 +59,9 @@ function Contact() {
   return (
     <div id="modal" className="modal">
       <div className="modal-content">
-        <span className="close-button" onClick={closeModal}>
+        <div className="close-button" onClick={closeModal}>
           &times;
-        </span>
+        </div>
         <h2>Request a Tour</h2>
         <form className="contact-form" onSubmit={handleSubmit}>
           <label>
